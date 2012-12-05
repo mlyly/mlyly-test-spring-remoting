@@ -11,7 +11,7 @@ public class TestUIServiceImpl implements TestUIService {
 
     private static final Logger LOG = Logger.getAnonymousLogger();
 
-    private static int _index = 0;
+    public static int _index = 0;
 
     @Override
     public TestObject ping(TestObject obj) {
