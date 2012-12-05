@@ -1,4 +1,10 @@
 
 # Simple Spring Remoting Testing
 
-Client and server packaged together - run the testcase to call the server.
+1. Build
+   '''mvn clean install -DskipTests
+
+2. Deploy to tomcat
+
+3. Run test
+   '''mvn test
