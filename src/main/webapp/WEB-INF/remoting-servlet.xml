@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+    <bean id="testUIService" class="fi.vm.sade.tarjonta.remotingserver.TestUIServiceImpl"/>
+
+<!--    <bean name="/testUIService" class="org.springframework.remoting.caucho.HessianServiceExporter">
+        <property name="service" ref="testUIService" />
+        <property name="serviceInterface" value="fi.vm.sade.tarjonta.remotingserver.TestUIService" />
+    </bean>-->
+
+    <bean name="/TestUIService" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+        <property name="service" ref="testUIService"/>
+        <property name="serviceInterface" value="fi.vm.sade.tarjonta.remotingserver.TestUIService" />
+    </bean>
+
+</beans>
