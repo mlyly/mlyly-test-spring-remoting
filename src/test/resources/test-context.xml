@@ -9,7 +9,7 @@
     <!-- Turn on AspectJ @Configurable support -->
     <context:spring-configured />
     <context:annotation-config />
-    <context:component-scan base-package="fi.vm.sade" />
+    <context:component-scan base-package="fi.zcode.remoting" />
 
     <!-- Turn on @Autowired, @PostConstruct etc support -->
     <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
@@ -20,7 +20,7 @@
     -->
     <bean id="testUIService" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
         <property name="serviceUrl" value="http://localhost:8080/remotingserver/remoting/TestUIService"/>
-        <property name="serviceInterface" value="fi.vm.sade.tarjonta.remotingserver.TestUIService"/>
+        <property name="serviceInterface" value="fi.zcode.remoting.TestUIService"/>
     </bean>
-    
+
 </beans>
